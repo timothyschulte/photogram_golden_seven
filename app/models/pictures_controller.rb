@@ -5,11 +5,18 @@ class PicturesController < ApplicationController
 
 
     def create_row
+        p = Photo.new
+        p.source = params["the_source"]
+        p.caption = params["the_caption"]
+        p.save
+        
         render("pic_templates/create_row.html.erb")
     end
 
 
     def index
+        all_pics = Photo.all
+        # fortune teller give examples about how to present each
         render("pic_templates/index.html.erb")
     end
 
@@ -27,12 +34,12 @@ class PicturesController < ApplicationController
     
     
     def update_row
-        render("pic_templates/new_form.html.erb")
+        render("pic_templates/update_row.html.erb")
     end
     
 
     def destroy_row
-        render("pic_templates/new_form.html.erb")
+        render("pic_templates/destroy_row.html.erb")
     end
 end
 
