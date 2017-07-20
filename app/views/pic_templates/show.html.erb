@@ -1,0 +1,23 @@
+<h1> Photo Details </h1>
+
+<p> 
+    <%= @pic.caption %>
+</p>
+
+<img src="<%= @pic.source %>">
+
+
+
+
+<a href="/photos" class="btn btn-default">
+  Go back
+</a>
+
+<a href="/photos/<%= @pic.id %>/edit" class="btn btn-default">
+  Edit
+</a>
+
+<a href="/delete_photo/<%= @pic.id %>" class="btn btn-default">
+  Delete
+</a>
+
