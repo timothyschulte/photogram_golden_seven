@@ -57,7 +57,10 @@ class PicturesController < ApplicationController
     
 
     def destroy_row
-        d = Photo.destroy
+        get("/delete_photo/:toast_id", { :controller => "pictures", :action => "destroy_row" })
+        delete_id = params["toast_id"]
+        d = Photo.find(delete_id)
+        
         d.save
         
         render("pic_templates/destroy_row.html.erb")

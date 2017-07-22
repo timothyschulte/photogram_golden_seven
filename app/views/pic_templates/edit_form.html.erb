@@ -8,7 +8,7 @@
       Image URL
     </label>
   
-    <input type="text" name="image_url" value="<%= @pic.source %>"
+    <input id="source_input" type="text" name="image_url" value="<%= @pic.source %>"
 </div>
   
 <div>
@@ -16,10 +16,10 @@
       Caption
     </label>
   
-    <input type="text" name="caption" value="<%= @pic.caption %>"
+    <input id="caption_input" type="text" name="caption" value="<%= @pic.caption %>"
 </div>
     
-  <button>Update photo</button>
+  <button>Update Photo</button>
 </form>
 
 
