@@ -54,7 +54,7 @@ class PicturesController < ApplicationController
         # d.save
         # render("pic_templates/destroy_row.html.erb")
         
-        p = Photo.find(params[:toast_id])
+        p = Photo.find(params["toast_id"])
         p.destroy
         p.save
         @remaining_count = Photo.count
