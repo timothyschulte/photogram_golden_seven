@@ -2,7 +2,7 @@
 
 
 
-<form action="/photos/:an_id/edit"></a>
+<form action="/update_photo/<%= @pic.id %>"></a>
 <div>
     <label>
       Image URL
@@ -21,3 +21,12 @@
     
   <button>Update photo</button>
 </form>
+
+
+
+
+<!--find the row in the database (like on the show and the edit pages)
+redefine what image & caption are equal to
+e.g., photo.caption is equal to whatever is in the params hash
+once redefined, photo.save
+-->
