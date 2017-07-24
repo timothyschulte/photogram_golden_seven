@@ -11,8 +11,8 @@ class PicturesController < ApplicationController
         p.save
         
         @photo_count = Photo.count
-        
-        render("pic_templates/create_row.html.erb")
+        redirect_to "/photos"
+        # render("pic_templates/create_row.html.erb")
     end
 
 
@@ -43,7 +43,8 @@ class PicturesController < ApplicationController
         p.source = params["image_url"]
         p.caption = params["caption"]
         p.save
-        render("pic_templates/update_row.html.erb")
+        redirect_to "/photos/"+params["some_id"]
+        # render("pic_templates/update_row.html.erb")
     end
     
 
@@ -58,7 +59,8 @@ class PicturesController < ApplicationController
         p.destroy
         p.save
         @remaining_count = Photo.count
-        render("pic_templates/destroy_row.html.erb")
+        redirect_to "/photos"
+        # render("pic_templates/destroy_row.html.erb")
 
     end
 end
