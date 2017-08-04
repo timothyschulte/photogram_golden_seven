@@ -1,0 +1,37 @@
+
+<h1> Edit photo </h1>
+
+
+
+<form action="/update_photo/<%= @pic.id %>"></a>
+<div>
+    <label>
+      Image URL
+    </label>
+  
+    <input id="source_input" type="text" name="image_url" value="<%= @pic.source %>"
+</div>
+  
+<div>
+    <label>
+      Caption
+    </label>
+  
+    <input id="caption_input" type="text" name="caption" value="<%= @pic.caption %>"
+</div>
+    
+  <button>Update Photo</button>
+</form>
+
+
+
+
+
+
+
+
+<!--find the row in the database (like on the show and the edit pages)
+redefine what image & caption are equal to
+e.g., photo.caption is equal to whatever is in the params hash
+once redefined, photo.save
+-->
