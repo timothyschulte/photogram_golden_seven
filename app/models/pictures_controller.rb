@@ -39,13 +39,20 @@ class PicturesController < ApplicationController
     
     
     def update_row
-        the_id_number = params["some_id"]
-        p = Photo.find(the_id_number)
-        p.source = params["image_url"]
-        p.caption = params["caption"]
-        p.save
-        redirect_to "/photos/"+params["some_id"]
-        # render("pic_templates/update_row.html.erb")
+        # the_id_number = params["some_id"]
+        # p = Photo.find(the_id_number)
+        # p.source = params["image_url"]
+        # p.caption = params["caption"]
+        # p.save
+        # redirect_to "/photos/"+params["some_id"]
+        # # render("pic_templates/update_row.html.erb")
+        
+        p = Photo.find(params["some_id"]);
+        p.source = params["the_source"];
+        p.caption = params["the_caption"];
+        p.save;
+        # render("pic_templates/update_row.html.erb");
+        redirect_to "/photos/"+params["some_id"];
     end
     
 
